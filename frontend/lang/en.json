@@ -1,0 +1,37 @@
+{
+  "Component": {
+    "Navigation": {
+      "about-us": "About us",
+      "blog": "Blog",
+      "contacts": "Contacts",
+      "services": "Services"
+    }
+  },
+  "Page": {
+    "About-us": {
+      "meta": {
+        "title": "About us"
+      }
+    },
+    "Blog": {
+      "meta": {
+        "title": "Blog"
+      }
+    },
+    "Contacts": {
+      "meta": {
+        "title": "Contacts"
+      }
+    },
+    "Home": {
+      "meta": {
+        "title": "Home"
+      }
+    },
+    "Services": {
+      "meta": {
+        "title": "Services"
+      }
+    }
+  }
+}
