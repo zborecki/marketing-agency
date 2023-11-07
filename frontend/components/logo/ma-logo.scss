@@ -1,0 +1,21 @@
+.ma-logo {
+  #logomark {
+    &-big-square > rect {
+      @apply stroke-primary-main;
+    }
+
+    &-small-square > rect {
+      @apply stroke-secondary-main;
+    }
+  }
+
+  #logotype {
+    &-agency path {
+      @apply fill-secondary-main;
+    }
+
+    &-marketing path {
+      @apply fill-primary-main;
+    }
+  }
+}

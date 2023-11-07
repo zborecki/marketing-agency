@@ -1,0 +1,13 @@
+.ma-quick-contact {
+  &__days {
+    @apply mr-3;
+  }
+
+  &__opening-days {
+    @apply text-ma-other-explanation;
+  }
+
+  &__phone-number {
+    @apply font-semibold text-[16px]/[normal];
+  }
+}

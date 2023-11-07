@@ -9,7 +9,7 @@ import { LocaleLayoutProps } from '#types/props/layouts';
 
 const font = Poppins({
   subsets: ['latin'],
-  weight: ['400']
+  weight: ['400', '600']
 });
 
 export const metadata: Metadata = {

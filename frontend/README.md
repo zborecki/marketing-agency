@@ -9,11 +9,16 @@ All commands are run from the root of the project, from a terminal:
 | `npm run lint`            | Analyze files and find incorrect patterns        |
 
 ## 📦 Packages
+- clsx
+- dayjs
 - eslint (airbnb's rules)
+- framer motion
 - next-intl
 - next.js
 - nextui
 - normalize.css
 - sass
+- tailwind-merge
 - tailwindcss
 - typescript
+- uuid

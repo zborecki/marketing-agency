@@ -13,11 +13,38 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        gray: {
+          0: '#FFFFFF',
+          50: '#F6F8FB',
+          100: '#E2E8EF',
+          150: '#B6BDC5'
+        },
+        primary: {
+          dark: '#292168',
+          main: '#413596'
+        },
+        secondary: {
+          dark: '#E1AA00',
+          main: '#F5C637'
+        },
+        typography: {
+          main: '#000000'
+        }
+      },
       fontSize: {
+        'ma-other-explanation': ['12px', {
+          fontWeight: 400,
+          lineHeight: '16px'
+        }],
         'ma-text-paragraph-3': ['14px', {
           fontWeight: 400,
           lineHeight: '24px'
         }]
+      },
+      maxWidth: {
+        primary: '1140px',
+        secondary: '1720px'
       }
     }
   },
