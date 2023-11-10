@@ -1,0 +1,31 @@
+.ma-header {
+  @apply bg-gray-0;
+
+  &__navigation .ma-navigation {
+    &__link {
+      @apply transition-colors;
+
+      &:hover {
+        @apply text-secondary-main;
+
+        & .ma-navigation {
+          &__arrow path {
+            @apply fill-secondary-main;
+          }
+        }
+      }
+    }
+
+    &__list {
+      @apply flex gap-12;
+    }
+  }
+
+  &__quick-contact {
+    @apply text-end;
+  }
+
+  &__wrapper.ma-wrapper {
+    @apply flex items-center justify-between py-6;
+  }
+}

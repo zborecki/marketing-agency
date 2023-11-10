@@ -5,6 +5,9 @@
       "blog": "Blog",
       "contacts": "Kontakt",
       "services": "Usługi"
+    },
+    "Quick-contact": {
+      "everyday": "Codziennie"
     }
   },
   "Page": {

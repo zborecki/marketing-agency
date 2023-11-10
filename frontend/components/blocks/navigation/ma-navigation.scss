@@ -1,0 +1,27 @@
+.ma-navigation {
+  &__arrow {
+    @apply absolute opacity-0 pointer-events-none -right-1 top-1/2 -translate-y-1/2;
+    transition: 
+      opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), 
+      transform 150ms cubic-bezier(0.4, 0, 0.2, 1)
+    ;
+
+    path {
+      @apply fill-typography-main transition-colors;
+    }
+  }
+
+  &__item {
+    @apply relative;
+  }
+
+  &__link {
+    @apply text-typography-main text-ma-text-paragraph-3;
+
+    &:hover .ma-navigation {
+      &__arrow {
+        @apply opacity-100 translate-x-4;
+      }
+    }
+  }
+}

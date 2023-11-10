@@ -6,10 +6,11 @@
     "@strapi/plugin-i18n": "4.15.0",
     "@strapi/plugin-users-permissions": "4.15.0",
     "@strapi/strapi": "4.15.0",
-    "better-sqlite3": "8.6.0"
+    "better-sqlite3": "8.6.0",
+    "strapi-plugin-populate-deep": "^3.0.1",
+    "strapi-plugin-transformer": "^3.1.2"
   },
   "description": "A Strapi application",
-  "devDependencies": {},
   "engines": {
     "node": ">=18.0.0 <=20.x.x",
     "npm": ">=6.0.0"

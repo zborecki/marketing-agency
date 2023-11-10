@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_date_start_ends",
+  "info": {
+    "displayName": "Opening days",
+    "icon": "calendar",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "start": {
+      "type": "enumeration",
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "end": {
+      "type": "enumeration",
+      "enum": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    },
+    "isEveryday": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

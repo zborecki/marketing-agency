@@ -1,0 +1,42 @@
+{
+  "kind": "singleType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "Contact",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "phoneNumber": {
+      "type": "string",
+      "required": true
+    },
+    "openingTime": {
+      "type": "time",
+      "required": true
+    },
+    "closingTime": {
+      "type": "time",
+      "required": true
+    },
+    "openingDays": {
+      "type": "component",
+      "repeatable": false,
+      "component": "date.start-end",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "location": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
