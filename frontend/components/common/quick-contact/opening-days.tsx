@@ -1,8 +1,8 @@
 import { useLocale, useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import { Days } from '#components/blocks/quick-contact/days';
-import { Hours } from '#components/blocks/quick-contact/hours';
+import { Days } from '#components/common/quick-contact/days';
+import { Hours } from '#components/common/quick-contact/hours';
 import { IOpeningDaysAPI } from '#types/api/components';
 import { TDayOfTheWeek } from '#types/common';
 

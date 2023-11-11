@@ -54,6 +54,7 @@ module.exports = {
     'react/prop-types': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-max-props-per-line': ['error', { maximum: 2 }],
-    'react/no-array-index-key': 'off'
+    'react/no-array-index-key': 'off',
+    'react/no-danger': 'off'
   }
 };

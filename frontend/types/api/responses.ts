@@ -10,3 +10,10 @@ export interface IContactResponse {
     phoneNumber: string;
   }
 }
+
+export interface IHeroSectionResponse {
+  data: {
+    description: string;
+    title: string;
+  };
+}

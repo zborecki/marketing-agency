@@ -3,17 +3,18 @@ import { Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { FC } from 'react';
 
+import { companyName } from '#constants/common';
 import { locales } from '#constants/languages';
 import { GlobalStylesLayout } from '#layouts/global-styles-layout';
 import { LocaleLayoutProps } from '#types/props/layouts';
 
 const font = Poppins({
   subsets: ['latin'],
-  weight: ['400', '600']
+  weight: ['400', '600', '700']
 });
 
 export const metadata: Metadata = {
-  title: 'Marketing Agency'
+  title: companyName
 };
 
 const RootLayout: FC<LocaleLayoutProps> = ({ children, params: { locale } }) => {

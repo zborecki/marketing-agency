@@ -37,14 +37,35 @@ const config: Config = {
           fontWeight: 400,
           lineHeight: '16px'
         }],
+        'ma-text-paragraph-1': ['18px', {
+          fontWeight: 400,
+          lineHeight: '32px'
+        }],
         'ma-text-paragraph-3': ['14px', {
           fontWeight: 400,
           lineHeight: '24px'
+        }],
+        'ma-title-h0': ['70px', {
+          fontWeight: 700,
+          lineHeight: '70px'
+        }],
+        'ma-title-h4': ['18px', {
+          fontWeight: 400,
+          lineHeight: '26px'
         }]
       },
       maxWidth: {
         primary: '1140px',
         secondary: '1720px'
+      },
+      screens: {
+        sm: { max: '576px' },
+        md: { max: '768px' },
+        lg: { max: '992px' },
+        xl: { max: '1200px' },
+        '2xl': { max: '1400px' },
+        primary: { max: '1140px' },
+        secondary: { max: '1720px' }
       }
     }
   },

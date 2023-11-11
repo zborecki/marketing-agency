@@ -5,9 +5,9 @@ import { OpeningDays } from './opening-days';
 import { getContact } from '#services/contact';
 import { BaseProps } from '#types/props/common';
 import { classNames } from '#utils/classNames';
-import '#components/blocks/quick-contact/ma-quick-contact.scss';
+import '#components/common/quick-contact/ma-quick-contact.scss';
 
-export const QuickContactBlock: FC<BaseProps> = async ({ className }) => {
+export const QuickContact: FC<BaseProps> = async ({ className }) => {
   const {
     closingTime, openingDays, openingTime, phoneNumber
   } = await getContact();

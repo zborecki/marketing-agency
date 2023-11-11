@@ -17,6 +17,8 @@ All commands are run from the root of the project, from a terminal:
 - next.js
 - nextui
 - normalize.css
+- remark
+- remark-html
 - sass
 - tailwind-merge
 - tailwindcss

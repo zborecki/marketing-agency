@@ -1,0 +1,19 @@
+.ma-section {
+  @apply max-w-secondary mx-auto;
+
+  &--blue {
+    @apply bg-primary-main;
+  }
+
+  &--gray {
+    @apply bg-gray-50;
+  }
+
+  &--white {
+    @apply bg-gray-0;
+  }
+
+  @screen secondary {
+    @apply mx-6
+  }
+}

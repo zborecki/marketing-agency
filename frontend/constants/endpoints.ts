@@ -1,3 +1,4 @@
 export enum ENDPOINT {
-  CONTACT = '/contact'
+  CONTACT = '/contact',
+  HERO_SECTION = '/hero-section'
 }
