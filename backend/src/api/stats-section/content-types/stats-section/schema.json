@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "stats_sections",
+  "info": {
+    "singularName": "stats-section",
+    "pluralName": "stats-sections",
+    "displayName": "Stats section"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "cards": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "card.stats-card",
+      "required": true,
+      "max": 4,
+      "min": 1
+    }
+  }
+}

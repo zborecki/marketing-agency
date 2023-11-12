@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_card_stats_cards",
+  "info": {
+    "displayName": "Stats Card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "value": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "currency",
+        "plus",
+        "years"
+      ],
+      "required": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

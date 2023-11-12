@@ -1,4 +1,4 @@
-import { IOpeningDaysAPI } from './components';
+import { IOpeningDaysAPI, IStatsCardAPI } from '#types/api/components';
 
 export interface IContactResponse {
   data: {
@@ -16,4 +16,10 @@ export interface IHeroSectionResponse {
     description: string;
     title: string;
   };
+}
+
+export interface IStatsSectionResponse {
+  data: {
+    cards: IStatsCardAPI[];
+  }
 }
