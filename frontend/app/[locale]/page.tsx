@@ -1,17 +1,25 @@
-import { useTranslations } from 'next-intl';
+import { Metadata } from 'next';
 
+import { HeroSection } from '#components/sections/hero';
+import { companyName } from '#constants/common';
 import { BaseLayout } from '#layouts/base-layout';
+import { IInternalization } from '#types/common';
+import { translator } from '#utils/translator';
 
-const HomePage = () => {
-  const t = useTranslations('Page.Home');
+export async function generateMetadata({ params }: IInternalization): Promise<Metadata> {
+  const { t } = await translator({ namespace: 'Page.Home', params });
 
-  return (
-    <BaseLayout>
-      <main>
-        { t('meta.title') }
-      </main>
-    </BaseLayout>
-  );
-};
+  return {
+    title: `${companyName} - ${t('meta.title')}`
+  };
+}
+
+const HomePage = () => (
+  <BaseLayout>
+    <main>
+      <HeroSection />
+    </main>
+  </BaseLayout>
+);
 
 export default HomePage;

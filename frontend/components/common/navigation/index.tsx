@@ -7,9 +7,9 @@ import { navigationItems } from '#constants/navigation';
 import { ArrowRightIcon } from '#icons/arrow-right-icon';
 import { NavigationBlockProps } from '#types/props/blocks';
 import { classNames } from '#utils/classNames';
-import '#components/blocks/navigation/ma-navigation.scss';
+import '#components/common/navigation/ma-navigation.scss';
 
-export const NavigationBlock: FC<NavigationBlockProps> = ({
+export const Navigation: FC<NavigationBlockProps> = ({
   arrow = false,
   className
 }) => {

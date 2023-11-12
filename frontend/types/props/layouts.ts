@@ -1,9 +1,5 @@
 import { PropsWithChildren } from 'react';
 
-import { TLanguage } from '#types/common';
+import { IInternalization } from '#types/common';
 
-export interface LocaleLayoutProps extends PropsWithChildren {
-  params: {
-    locale: TLanguage;
-  }
-}
+export type LocaleLayoutProps = IInternalization & PropsWithChildren;

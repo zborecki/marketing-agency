@@ -1,0 +1,27 @@
+.ma-hero {
+  &__description {
+    @apply text-ma-text-paragraph-1;
+
+    strong {
+      @apply font-semibold;
+    }
+  }
+
+  &__panel {
+    &--primary .ma-wrapper {
+      @apply pb-12 pt-44;
+    }
+
+    &--secondary .ma-wrapper  {
+      @apply pt-12;
+    }
+  }
+
+  &__title {
+    @apply text-gray-0 text-ma-title-h4;
+
+    strong {
+      @apply text-ma-title-h0 uppercase;
+    }
+  }
+}
