@@ -5,3 +5,9 @@ export interface IOpeningDaysAPI {
   isEveryday: string;
   start?: TDayOfTheWeek;
 }
+
+export interface IStatsCardAPI {
+  description: string;
+  value: number;
+  type: 'currency' | 'plus' | 'years';
+}

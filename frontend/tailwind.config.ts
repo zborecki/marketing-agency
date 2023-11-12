@@ -33,6 +33,14 @@ const config: Config = {
         }
       },
       fontSize: {
+        'ma-number-big-1': ['50px', {
+          fontWeight: 700,
+          lineHeight: '60px'
+        }],
+        'ma-number-big-1-text': ['20px', {
+          fontWeight: 600,
+          lineHeight: '28px'
+        }],
         'ma-other-explanation': ['12px', {
           fontWeight: 400,
           lineHeight: '16px'
@@ -40,6 +48,10 @@ const config: Config = {
         'ma-text-paragraph-1': ['18px', {
           fontWeight: 400,
           lineHeight: '32px'
+        }],
+        'ma-text-paragraph-2': ['16px', {
+          fontWeight: 400,
+          lineHeight: '26px'
         }],
         'ma-text-paragraph-3': ['14px', {
           fontWeight: 400,

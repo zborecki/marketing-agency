@@ -766,6 +766,56 @@ export interface ApiHeroSectionHeroSection extends Schema.SingleType {
   };
 }
 
+export interface ApiStatsSectionStatsSection extends Schema.SingleType {
+  collectionName: 'stats_sections';
+  info: {
+    singularName: 'stats-section';
+    pluralName: 'stats-sections';
+    displayName: 'Stats section';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    cards: Attribute.Component<'card.stats-card', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 4;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::stats-section.stats-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::stats-section.stats-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::stats-section.stats-section',
+      'oneToMany',
+      'api::stats-section.stats-section'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -784,6 +834,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::contact.contact': ApiContactContact;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
+      'api::stats-section.stats-section': ApiStatsSectionStatsSection;
     }
   }
 }

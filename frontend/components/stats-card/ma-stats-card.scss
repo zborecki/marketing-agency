@@ -1,0 +1,15 @@
+.ma-stats-card {
+  @apply hover:bg-gray-50 p-4 rounded-[4px] transition-colors;
+
+  &__description {
+    @apply text-ma-text-paragraph-2;
+  }
+
+  &__title {
+    @apply mb-4 text-ma-number-big-1 text-primary-main;
+
+    &--small {
+      @apply text-ma-number-big-1-text;
+    }
+  }
+}

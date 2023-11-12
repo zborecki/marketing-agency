@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 
 import { HeroSection } from '#components/sections/hero';
+import { StatsSection } from '#components/sections/stats';
 import { companyName } from '#constants/common';
 import { BaseLayout } from '#layouts/base-layout';
 import { IInternalization } from '#types/common';
@@ -18,6 +19,7 @@ const HomePage = () => (
   <BaseLayout>
     <main>
       <HeroSection />
+      <StatsSection />
     </main>
   </BaseLayout>
 );

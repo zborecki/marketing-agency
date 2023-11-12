@@ -8,6 +8,12 @@
     },
     "Quick-contact": {
       "everyday": "Everyday"
+    },
+    "Stats-card": {
+      "currency": "$",
+      "plus": "+",
+      "year": "year",
+      "years": "years"
     }
   },
   "Page": {
