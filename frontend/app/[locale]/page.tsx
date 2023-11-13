@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 
+import { Divider } from '#components/common/divider';
+import { AdvantagesSection } from '#components/sections/advantages';
 import { HeroSection } from '#components/sections/hero';
 import { StatsSection } from '#components/sections/stats';
 import { companyName } from '#constants/common';
@@ -20,6 +22,8 @@ const HomePage = () => (
     <main>
       <HeroSection />
       <StatsSection />
+      <Divider />
+      <AdvantagesSection />
     </main>
   </BaseLayout>
 );

@@ -1,5 +1,5 @@
 .ma-stats {
   & .ma-wrapper {
-    @apply gap-20 grid grid-cols-[repeat(4,minmax(0,225px))] py-[120px];
+    @apply gap-20 grid grid-cols-[repeat(4,minmax(0,225px))];
   }
 }

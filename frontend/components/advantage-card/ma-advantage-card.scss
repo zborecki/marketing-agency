@@ -1,0 +1,9 @@
+.ma-advantage-card {
+  &__content {
+    @apply text-ma-text-paragraph-1;
+  }
+
+  &__index {
+    @apply font-semibold mb-[18px] text-gray-150 text-ma-text-paragraph-2;
+  }
+}

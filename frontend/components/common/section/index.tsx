@@ -1,19 +1,28 @@
 import { FC } from 'react';
 
-import { Wrapper } from '#components/common/wrapper';
+import { SectionHeader } from '#components/common/section-header';
+import { SectionWrapper } from '#components/common/section-wrapper';
 import { SectionProps } from '#types/props/components';
 import { classNames } from '#utils/classNames';
 import '#components/common/section/ma-section.scss';
 
 export const Section: FC<SectionProps> = ({
-  as: As = 'section',
   children,
   className,
-  color = 'gray'
+  color = 'white',
+  subtitle,
+  title
 }) => (
-  <As className={classNames(['ma-section', `ma-section--${color}`, className])}>
-    <Wrapper>
-      { children }
-    </Wrapper>
-  </As>
+  <SectionWrapper
+    as="section"
+    className={classNames(['ma-section', className])}
+    color={color}
+  >
+    <SectionHeader
+      className={`ma-section__header ma-section__header--${color}`}
+      subtitle={subtitle}
+      title={title}
+    />
+    { children }
+  </SectionWrapper>
 );

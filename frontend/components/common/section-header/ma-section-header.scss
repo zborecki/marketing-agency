@@ -1,0 +1,9 @@
+.ma-section-header {
+  &__subtitle {
+    @apply mb-2 text-gray-150 text-ma-title-h4;
+  }
+
+  &__title {
+    @apply text-ma-title-h2 text-primary-main;
+  }
+}

@@ -1,0 +1,25 @@
+.ma-section-wrapper {
+  @apply max-w-secondary mx-auto;
+
+  &--blue {
+    @apply bg-primary-main;
+  }
+
+  &--gray {
+    @apply bg-gray-50;
+  }
+
+  &--white {
+    @apply bg-gray-0;
+  }
+
+  &__wrapper {
+    &--default-padding {
+      @apply py-[120px];
+    }
+  }
+
+  @screen secondary {
+    @apply mx-6
+  }
+}
