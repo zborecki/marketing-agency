@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_card_advantage_cards",
+  "info": {
+    "displayName": "Advantage Card",
+    "icon": "attachment"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

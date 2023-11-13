@@ -61,6 +61,10 @@ const config: Config = {
           fontWeight: 700,
           lineHeight: '70px'
         }],
+        'ma-title-h2': ['46px', {
+          fontWeight: 700,
+          lineHeight: '50px'
+        }],
         'ma-title-h4': ['18px', {
           fontWeight: 400,
           lineHeight: '26px'

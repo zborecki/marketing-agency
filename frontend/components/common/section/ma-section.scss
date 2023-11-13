@@ -1,19 +1,31 @@
 .ma-section {
-  @apply max-w-secondary mx-auto;
+  &__header {
+    @apply text-center;
 
-  &--blue {
-    @apply bg-primary-main;
-  }
+    &--blue .ma-section-header {
+      &__subtitle, &__title {
+        @apply text-gray-0;
+      }
+    }
 
-  &--gray {
-    @apply bg-gray-50;
-  }
+    &--gray .ma-section-header {
+      &__subtitle {
+        @apply text-gray-150;
+      }
 
-  &--white {
-    @apply bg-gray-0;
-  }
+      &__title {
+        @apply text-primary-main;
+      }
+    }
 
-  @screen secondary {
-    @apply mx-6
+    &--white .ma-section-header {
+      &__subtitle {
+        @apply text-gray-150;
+      }
+
+      &__title {
+        @apply text-primary-main;
+      }
+    }
   }
 }

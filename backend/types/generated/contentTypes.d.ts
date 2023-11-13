@@ -677,6 +677,70 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAdvantagesSectionAdvantagesSection
+  extends Schema.SingleType {
+  collectionName: 'advantages_sections';
+  info: {
+    singularName: 'advantages-section';
+    pluralName: 'advantages-sections';
+    displayName: 'Advantages section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cards: Attribute.Component<'card.advantage-card', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 4;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::advantages-section.advantages-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::advantages-section.advantages-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::advantages-section.advantages-section',
+      'oneToMany',
+      'api::advantages-section.advantages-section'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiContactContact extends Schema.SingleType {
   collectionName: 'contacts';
   info: {
@@ -832,6 +896,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::advantages-section.advantages-section': ApiAdvantagesSectionAdvantagesSection;
       'api::contact.contact': ApiContactContact;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::stats-section.stats-section': ApiStatsSectionStatsSection;
