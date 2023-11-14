@@ -1,6 +1,6 @@
-import { IOpeningDaysAPI, IStatsCardAPI } from '#types/api/components';
+import { OpeningDaysAPI, StatsCardAPI } from '#types/api/components';
 
-export interface IAvantagesSectionResponse {
+export interface AdvantagesResponse {
   data: {
     cards: {
       content: string;
@@ -10,26 +10,26 @@ export interface IAvantagesSectionResponse {
   }
 }
 
-export interface IContactResponse {
+export interface ContactResponse {
   data: {
     closingTime: string;
     email: string;
     location: string;
-    openingDays: IOpeningDaysAPI;
+    openingDays: OpeningDaysAPI;
     openingTime: string;
     phoneNumber: string;
   }
 }
 
-export interface IHeroSectionResponse {
+export interface HeroResponse {
   data: {
     description: string;
     title: string;
   };
 }
 
-export interface IStatsSectionResponse {
+export interface StatsResponse {
   data: {
-    cards: IStatsCardAPI[];
+    cards: StatsCardAPI[];
   }
 }

@@ -1,23 +1,23 @@
-import { ROUTE } from './routes';
+import { INTERNAL_ROUTE } from './routes';
 
-import { INavigationItem } from '#types/common';
-import { getRouteId } from '#utils/get-route-id';
+import { RouteItem } from '#types/items';
+import { routeName } from '#utils/route-name';
 
-export const navigationItems: INavigationItem[] = [
+export const PRIMARY_NAVIGATION: RouteItem[] = [
   {
-    id: getRouteId('/about-us'),
-    route: ROUTE.ABOUT_US
+    name: routeName({ route: '/about-us' }),
+    url: INTERNAL_ROUTE.ABOUT_US
   },
   {
-    id: getRouteId('/services'),
-    route: ROUTE.SERVICES
+    name: routeName({ route: '/services' }),
+    url: INTERNAL_ROUTE.SERVICES
   },
   {
-    id: getRouteId('/blog'),
-    route: ROUTE.BLOG
+    name: routeName({ route: '/blog' }),
+    url: INTERNAL_ROUTE.BLOG
   },
   {
-    id: getRouteId('/contacts'),
-    route: ROUTE.CONTACTS
+    name: routeName({ route: '/contacts' }),
+    url: INTERNAL_ROUTE.CONTACTS
   }
 ];

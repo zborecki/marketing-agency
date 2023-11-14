@@ -1,3 +1,3 @@
-export type TLocaleRequest = {
+export type LocaleRequest = {
   locale: string;
 };

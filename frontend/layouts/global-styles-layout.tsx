@@ -3,7 +3,7 @@
 import { NextUIProvider } from '@nextui-org/react';
 import { FC, PropsWithChildren } from 'react';
 import 'normalize.css';
-import '#theme/globals.scss';
+import '#theme/ma-globals.scss';
 
 export const GlobalStylesLayout: FC<PropsWithChildren> = ({ children }) => (
   <NextUIProvider>

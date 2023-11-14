@@ -1,16 +1,13 @@
 import dayjs from 'dayjs';
 import updateLocale from 'dayjs/plugin/updateLocale';
 
-import { DayOfTheWeek } from '#constants/date';
-import { TDayOfTheWeek } from '#types/common';
+import { DAY_OF_THE_WEEK } from '#constants/date-and-time';
+import { DayOfTheWeek } from '#types/date-and-time';
 
-// Languages
 require('dayjs/locale/pl');
 
-// Plugins
 dayjs.extend(updateLocale);
 
-// Configurations
 dayjs.updateLocale('en', {
   weekdaysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 });
@@ -20,6 +17,6 @@ dayjs.updateLocale('pl', {
 });
 
 export const abbreviatedDayOfTheWeek = (
-  name: TDayOfTheWeek,
+  name: DayOfTheWeek,
   locale: string
-) => dayjs().locale(locale).day(DayOfTheWeek[name]).format('ddd');
+) => dayjs().locale(locale).day(DAY_OF_THE_WEEK[name]).format('ddd');

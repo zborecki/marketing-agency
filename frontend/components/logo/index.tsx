@@ -2,7 +2,6 @@ import { FC } from 'react';
 
 import { BaseProps } from '#types/props/common';
 import { classNames } from '#utils/classNames';
-import '#components/logo/ma-logo.scss';
 
 export const Logo: FC<BaseProps> = ({ className }) => (
   <svg

@@ -1,26 +1,26 @@
 import { ENDPOINT } from '#constants/endpoints';
-import { cmsApi } from '#lib/api';
-import { TLocaleRequest } from '#types/api/requests';
+import { cms } from '#lib/api';
+import { LocaleRequest } from '#types/api/requests';
 import {
-  IAvantagesSectionResponse,
-  IHeroSectionResponse,
-  IStatsSectionResponse
+  AdvantagesResponse,
+  HeroResponse,
+  StatsResponse
 } from '#types/api/responses';
 
-export const getAdvantagesSection = async ({ locale }: TLocaleRequest) => (
-  await cmsApi.get<IAvantagesSectionResponse>(
+export const getAdvantagesSection = async ({ locale }: LocaleRequest) => (
+  await cms.get<AdvantagesResponse>(
     `${ENDPOINT.ADVANTAGES_SECTION}?populate=deep&locale=${locale}`
   )
 ).data.data;
 
-export const getHeroSection = async ({ locale }: TLocaleRequest) => (
-  await cmsApi.get<IHeroSectionResponse>(
+export const getHeroSection = async ({ locale }: LocaleRequest) => (
+  await cms.get<HeroResponse>(
     `${ENDPOINT.HERO_SECTION}?locale=${locale}`
   )
 ).data.data;
 
-export const getStatsSection = async ({ locale }: TLocaleRequest) => (
-  await cmsApi.get<IStatsSectionResponse>(
+export const getStatsSection = async ({ locale }: LocaleRequest) => (
+  await cms.get<StatsResponse>(
     `${ENDPOINT.STATS_SECTION}?populate=deep&locale=${locale}`
   )
 ).data.data;

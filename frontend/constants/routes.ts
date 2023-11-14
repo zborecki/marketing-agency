@@ -1,4 +1,4 @@
-export enum ROUTE {
+export enum INTERNAL_ROUTE {
   ABOUT_US = '/about-us',
   ARTICLE = '/article',
   CONTACTS = '/contacts',

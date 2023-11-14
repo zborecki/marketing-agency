@@ -1,15 +1,16 @@
 import { Metadata } from 'next';
 
-import { Divider } from '#components/common/divider';
-import { AdvantagesSection } from '#components/sections/advantages';
-import { HeroSection } from '#components/sections/hero';
-import { StatsSection } from '#components/sections/stats';
+import { AchievementsSection } from '#/sections/achievements';
+import { AdvantagesSection } from '#/sections/advantages';
+import { HeroSection } from '#/sections/hero';
+import { StatsSection } from '#/sections/stats';
+import { Divider } from '#components/divider';
 import { companyName } from '#constants/common';
 import { BaseLayout } from '#layouts/base-layout';
-import { IInternalization } from '#types/common';
+import { Internalization } from '#types/locales';
 import { translator } from '#utils/translator';
 
-export async function generateMetadata({ params }: IInternalization): Promise<Metadata> {
+export async function generateMetadata({ params }: Internalization): Promise<Metadata> {
   const { t } = await translator({ namespace: 'Page.Home', params });
 
   return {
@@ -24,6 +25,7 @@ const HomePage = () => (
       <StatsSection />
       <Divider />
       <AdvantagesSection />
+      <AchievementsSection />
     </main>
   </BaseLayout>
 );

@@ -1,5 +1,8 @@
-import { TLanguage } from '#types/common';
+import { Locale } from '#types/locales';
 
-export const defaultLocale: TLanguage = 'en';
+export const defaultLocale: Locale = 'en';
 
-export const locales: TLanguage[] = ['en', 'pl'];
+export const locales: Locale[] = [
+  'en',
+  'pl'
+];

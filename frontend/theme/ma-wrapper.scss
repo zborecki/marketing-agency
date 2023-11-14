@@ -1,0 +1,11 @@
+.ma-wrapper {
+  @apply box-content px-6 mx-[auto];
+
+  &--md {
+    @apply max-w-md;
+  }
+
+  &--lg {
+    @apply max-w-lg;
+  }
+}

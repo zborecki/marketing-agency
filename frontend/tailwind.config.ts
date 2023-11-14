@@ -29,7 +29,7 @@ const config: Config = {
           main: '#F5C637'
         },
         typography: {
-          main: '#000000'
+          main: '#232323'
         }
       },
       fontSize: {
@@ -71,8 +71,8 @@ const config: Config = {
         }]
       },
       maxWidth: {
-        primary: '1140px',
-        secondary: '1720px'
+        md: '1140px',
+        lg: '1720px'
       },
       screens: {
         sm: { max: '576px' },

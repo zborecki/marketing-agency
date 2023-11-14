@@ -1,12 +1,12 @@
 import { createTranslator } from 'next-intl';
 
-import { IInternalization } from '#types/common';
+import { Internalization } from '#types/locales';
 
-export interface Parameters extends IInternalization {
+export interface Parameters extends Internalization {
   namespace?: string;
 }
 
-export const translator = async ({ namespace, params: { locale } }:Parameters) => {
+export const translator = async ({ namespace, params: { locale } }: Parameters) => {
   const messages = (await import(`../lang/${locale}.json`)).default;
 
   return {
