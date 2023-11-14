@@ -1,5 +1,13 @@
 import { OpeningDaysAPI, StatsCardAPI } from '#types/api/components';
 
+export interface AchievementsResponse {
+  data: {
+    cards: StatsCardAPI[];
+    description: string;
+    title: string;
+  }
+}
+
 export interface AdvantagesResponse {
   data: {
     cards: {

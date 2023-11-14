@@ -1,11 +1,24 @@
-import { Section } from '#components/section';
+import { useLocale } from 'next-intl';
 
-export const AchievementsSection = () => (
-  <Section
-    color="tertiary"
-    subtitle="Subtitle"
-    title="Title"
-  >
-    Content
-  </Section>
-);
+import { Section } from '#components/section';
+import { StatsList } from '#components/stats-list';
+import { getAchievementsSection } from '#services/sections';
+
+export const AchievementsSection = async () => {
+  const locale = useLocale();
+  const { cards, description, title } = await getAchievementsSection({ locale });
+
+  return (
+    <Section
+      className="ma-achievements"
+      color="tertiary"
+      subtitle={description}
+      title={title}
+    >
+      <StatsList
+        className="achievements__list"
+        items={cards}
+      />
+    </Section>
+  );
+};

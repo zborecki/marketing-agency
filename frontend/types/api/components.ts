@@ -9,5 +9,5 @@ export interface OpeningDaysAPI {
 export interface StatsCardAPI {
   description: string;
   value: number;
-  type: 'currency' | 'plus' | 'years';
+  type: 'clients' | 'currency' | 'million' | 'plus' | 'years';
 }

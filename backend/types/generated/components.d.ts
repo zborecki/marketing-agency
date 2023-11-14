@@ -23,7 +23,9 @@ export interface CardStatsCard extends Schema.Component {
       Attribute.SetMinMax<{
         min: 1;
       }>;
-    type: Attribute.Enumeration<['currency', 'plus', 'years']> &
+    type: Attribute.Enumeration<
+      ['clients', 'currency', 'million', 'plus', 'years']
+    > &
       Attribute.Required;
     description: Attribute.RichText & Attribute.Required;
   };

@@ -10,7 +10,9 @@
       "everyday": "Codziennie"
     },
     "Stats-card": {
+      "clients": "klientów",
       "currency": "zł",
+      "million": "milionów",
       "plus": "+",
       "year": "rok",
       "years": "lat"

@@ -1,0 +1,9 @@
+.ma-achievements {
+  & .ma-stats-card {
+    @apply hover:bg-transparent;
+
+    &__description, &__title {
+      @apply text-gray-0;
+    }
+  }
+}

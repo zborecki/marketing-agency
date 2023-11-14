@@ -1,6 +1,6 @@
 .ma-section {
   &__header {
-    @apply text-center;
+    @apply mb-[72px] text-center;
 
     &--primary .ma-section-header, 
     &--secondary .ma-section-header  {

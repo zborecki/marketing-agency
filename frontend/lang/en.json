@@ -10,7 +10,9 @@
       "everyday": "Everyday"
     },
     "Stats-card": {
+      "clients": "clients",
       "currency": "$",
+      "million": "million",
       "plus": "+",
       "year": "year",
       "years": "years"
