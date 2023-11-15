@@ -1,9 +1,10 @@
 import { Divider as Component } from '@nextui-org/react';
 import { FC } from 'react';
 
-import { BaseProps } from '#types/props/common';
+import { } from '#types/props/common';
+import { DividerProps } from '#types/props/components';
 import { classNames } from '#utils/classNames';
 
-export const Divider: FC<BaseProps> = ({ className }) => (
-  <Component className={classNames(['ma-divider', className])} />
+export const Divider: FC<DividerProps> = ({ className, maxWidth = 'container' }) => (
+  <Component className={classNames(['ma-divider', `ma-divider--${maxWidth}`, className])} />
 );

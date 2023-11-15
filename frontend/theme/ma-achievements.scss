@@ -1,6 +1,6 @@
 .ma-achievements {
   & .ma-stats-card {
-    @apply hover:bg-transparent;
+    @apply hover:bg-transparent p-0;
 
     &__description, &__title {
       @apply text-gray-0;
