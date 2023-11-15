@@ -26,6 +26,7 @@
       "#layouts/*": ["./layouts/*"],
       "#lib/*": ["./lib/*"],
       "#providers/*": ["./providers/*"],
+      "#sections/*": ["./sections/*"],
       "#services/*": ["./services/*"],
       "#theme/*": ["./theme/*"],
       "#types/*": ["./types/*"],

@@ -677,6 +677,72 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
+export interface ApiAchievementsSectionAchievementsSection
+  extends Schema.SingleType {
+  collectionName: 'achievements_sections';
+  info: {
+    singularName: 'achievements-section';
+    pluralName: 'achievements-sections';
+    displayName: 'Achievements section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    cards: Attribute.Component<'card.stats-card', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMax<{
+        min: 1;
+        max: 4;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::achievements-section.achievements-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::achievements-section.achievements-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::achievements-section.achievements-section',
+      'oneToMany',
+      'api::achievements-section.achievements-section'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiAdvantagesSectionAdvantagesSection
   extends Schema.SingleType {
   collectionName: 'advantages_sections';
@@ -896,6 +962,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
+      'api::achievements-section.achievements-section': ApiAchievementsSectionAchievementsSection;
       'api::advantages-section.advantages-section': ApiAdvantagesSectionAdvantagesSection;
       'api::contact.contact': ApiContactContact;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;

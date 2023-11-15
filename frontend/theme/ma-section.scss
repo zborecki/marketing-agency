@@ -1,0 +1,22 @@
+.ma-section {
+  &__header {
+    @apply mb-[72px] text-center;
+
+    &--primary .ma-section-header, 
+    &--secondary .ma-section-header  {
+      &__subtitle {
+        @apply text-gray-150;
+      }
+
+      &__title {
+        @apply text-primary-main;
+      }
+    }
+
+    &--tertiary .ma-section-header {
+      &__subtitle, &__title {
+        @apply text-gray-0;
+      }
+    }
+  }
+}

@@ -1,13 +1,13 @@
-import { TDayOfTheWeek } from '#types/common';
+import { DayOfTheWeek } from '#types/date-and-time';
 
-export interface IOpeningDaysAPI {
-  end?: TDayOfTheWeek;
+export interface OpeningDaysAPI {
+  end?: DayOfTheWeek;
   isEveryday: string;
-  start?: TDayOfTheWeek;
+  start?: DayOfTheWeek;
 }
 
-export interface IStatsCardAPI {
+export interface StatsCardAPI {
   description: string;
   value: number;
-  type: 'currency' | 'plus' | 'years';
+  type: 'clients' | 'currency' | 'million' | 'plus' | 'years';
 }

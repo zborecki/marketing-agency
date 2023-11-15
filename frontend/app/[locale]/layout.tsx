@@ -6,7 +6,7 @@ import { FC } from 'react';
 import { companyName } from '#constants/common';
 import { locales } from '#constants/languages';
 import { GlobalStylesLayout } from '#layouts/global-styles-layout';
-import { LocaleLayoutProps } from '#types/props/layouts';
+import { BaseLayoutProps } from '#types/props/layouts';
 
 const font = Poppins({
   subsets: ['latin'],
@@ -17,7 +17,10 @@ export const metadata: Metadata = {
   title: companyName
 };
 
-const RootLayout: FC<LocaleLayoutProps> = ({ children, params: { locale } }) => {
+const RootLayout: FC<BaseLayoutProps> = ({
+  children,
+  params: { locale }
+}) => {
   const isValidLocale = locales.some((currentLocale) => currentLocale === locale);
 
   if (!isValidLocale) {

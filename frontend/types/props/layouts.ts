@@ -1,5 +1,5 @@
 import { PropsWithChildren } from 'react';
 
-import { IInternalization } from '#types/common';
+import { Internalization } from '#types/locales';
 
-export type LocaleLayoutProps = IInternalization & PropsWithChildren;
+export type BaseLayoutProps = Internalization & PropsWithChildren;

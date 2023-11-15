@@ -14,7 +14,9 @@
     "type": {
       "type": "enumeration",
       "enum": [
+        "clients",
         "currency",
+        "million",
         "plus",
         "years"
       ],

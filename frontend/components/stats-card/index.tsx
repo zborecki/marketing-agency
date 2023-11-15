@@ -1,10 +1,9 @@
 import { useTranslations } from 'next-intl';
 import { FC } from 'react';
 
-import { IStatsCardAPI } from '#types/api/components';
-import '#components/stats-card/ma-stats-card.scss';
+import { StatsCardAPI } from '#types/api/components';
 
-export const StatsCard: FC<IStatsCardAPI> = ({
+export const StatsCard: FC<StatsCardAPI> = ({
   description, value, type
 }) => {
   const t = useTranslations('Component.Stats-card');
