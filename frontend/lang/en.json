@@ -1,5 +1,13 @@
 {
   "Component": {
+    "Footer": {
+      "about-company": "Our main goal is to be the best\nfor our customers",
+      "copyright": "{year} All rights reserved.",
+      "title": {
+        "about-company": "About company",
+        "contacts": "Contacts"
+      }
+    },
     "Navigation": {
       "about-us": "About us",
       "blog": "Blog",

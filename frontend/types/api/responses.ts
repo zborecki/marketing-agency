@@ -1,4 +1,4 @@
-import { OpeningDaysAPI, StatsCardAPI } from '#types/api/components';
+import { OpeningDaysAPI, SocialMediaAPI, StatsCardAPI } from '#types/api/components';
 
 export interface AchievementsResponse {
   data: {
@@ -34,6 +34,12 @@ export interface HeroResponse {
     description: string;
     title: string;
   };
+}
+
+export interface SocialMediaResponse {
+  data: {
+    socialMedia: SocialMediaAPI[];
+  }
 }
 
 export interface StatsResponse {

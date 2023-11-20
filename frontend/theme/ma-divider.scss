@@ -1,3 +1,11 @@
 .ma-divider {
-  @apply bg-gray-100 max-w-md mx-auto;
+  @apply bg-gray-100 mx-auto;
+
+  &--container {
+    @apply max-w-md;
+  }
+
+  &--full {
+    @apply max-w-full;
+  }
 }

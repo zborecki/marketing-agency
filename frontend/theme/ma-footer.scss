@@ -1,0 +1,52 @@
+@mixin divider {
+  @apply border-t border-gray-100;
+}
+
+.ma-footer {
+  @include divider;
+
+  &__about-company {
+    @apply italic text-gray-150 text-ma-text-paragraph-2;
+  }
+
+  &__bottom {
+    @apply py-4;
+    @include divider;
+  }
+
+  &__copyright {
+    @apply text-center text-gray-150 text-ma-other-explanation;
+  }
+
+  &__logo {
+    @apply mb-8;
+  }
+
+  &__main {
+    @apply gap-8 flex justify-between py-12;
+  }
+
+  &__navigation {
+    & .ma-navigation {
+      &__link {
+        @apply hover:text-secondary-main transition-colors;
+      }
+
+      &__list {
+        @apply gap-x-24 gap-y-2 grid grid-cols-2;
+      }
+    }
+  }
+
+  &__paragraph {
+    @apply mb-2 text-ma-text-paragraph-3;
+  }
+
+  &__social-media {
+    @apply mt-6;
+  }
+
+  &__title {
+    @apply font-semibold leading-[26px] mb-4 text-[16px];
+  }
+}

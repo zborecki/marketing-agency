@@ -1,0 +1,13 @@
+.ma-social-item {
+  &:hover {
+    .ma-social-item {
+      &__icon path {
+        @apply fill-secondary-main;
+      }
+    }
+  }
+
+  &__icon path {
+    @apply fill-typography-main transition-colors;
+  }
+}

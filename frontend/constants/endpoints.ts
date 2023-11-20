@@ -3,5 +3,6 @@ export enum ENDPOINT {
   ADVANTAGES_SECTION = '/advantages-section',
   CONTACT = '/contact',
   HERO_SECTION = '/hero-section',
+  SOCIAL_MEDIA = '/social-media',
   STATS_SECTION = '/stats-section'
 }

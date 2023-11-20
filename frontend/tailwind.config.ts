@@ -13,6 +13,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      boxShadow: {
+        primary: '0px 8px 45px 0px rgba(56, 31, 115, 0.05)'
+      },
       colors: {
         gray: {
           0: '#FFFFFF',
