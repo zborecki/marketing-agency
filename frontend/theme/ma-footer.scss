@@ -27,13 +27,23 @@
   }
 
   &__navigation {
-    & .ma-navigation__list {
-      @apply gap-x-24 gap-y-2 grid grid-cols-2;
+    & .ma-navigation {
+      &__link {
+        @apply hover:text-secondary-main transition-colors;
+      }
+
+      &__list {
+        @apply gap-x-24 gap-y-2 grid grid-cols-2;
+      }
     }
   }
 
   &__paragraph {
     @apply mb-2 text-ma-text-paragraph-3;
+  }
+
+  &__social-media {
+    @apply mt-6;
   }
 
   &__title {

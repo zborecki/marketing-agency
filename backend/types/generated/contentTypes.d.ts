@@ -896,6 +896,56 @@ export interface ApiHeroSectionHeroSection extends Schema.SingleType {
   };
 }
 
+export interface ApiSocialMediaSocialMedia extends Schema.SingleType {
+  collectionName: 'social_medias';
+  info: {
+    singularName: 'social-media';
+    pluralName: 'social-medias';
+    displayName: 'Social media';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    socialMedia: Attribute.Component<'item.social-media-item', true> &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMax<{
+        max: 4;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::social-media.social-media',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::social-media.social-media',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::social-media.social-media',
+      'oneToMany',
+      'api::social-media.social-media'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiStatsSectionStatsSection extends Schema.SingleType {
   collectionName: 'stats_sections';
   info: {
@@ -966,6 +1016,7 @@ declare module '@strapi/types' {
       'api::advantages-section.advantages-section': ApiAdvantagesSectionAdvantagesSection;
       'api::contact.contact': ApiContactContact;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
+      'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::stats-section.stats-section': ApiStatsSectionStatsSection;
     }
   }

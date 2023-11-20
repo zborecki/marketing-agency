@@ -67,12 +67,26 @@ export interface DateStartEnd extends Schema.Component {
   };
 }
 
+export interface ItemSocialMediaItem extends Schema.Component {
+  collectionName: 'components_item_social_media_items';
+  info: {
+    displayName: 'Social media Item';
+    description: '';
+  };
+  attributes: {
+    type: Attribute.Enumeration<['facebook', 'instagram']> & Attribute.Required;
+    url: Attribute.String & Attribute.Required;
+    label: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'card.advantage-card': CardAdvantageCard;
       'card.stats-card': CardStatsCard;
       'date.start-end': DateStartEnd;
+      'item.social-media-item': ItemSocialMediaItem;
     }
   }
 }
