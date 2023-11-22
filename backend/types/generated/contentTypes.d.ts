@@ -996,6 +996,70 @@ export interface ApiStatsSectionStatsSection extends Schema.SingleType {
   };
 }
 
+export interface ApiTestimonialsSectionTestimonialsSection
+  extends Schema.SingleType {
+  collectionName: 'testimonials_sections';
+  info: {
+    singularName: 'testimonials-section';
+    pluralName: 'testimonials-sections';
+    displayName: 'Testimonials section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    testimonials: Attribute.Component<'card.testimonial-card', true> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }> &
+      Attribute.SetMinMax<{
+        min: 2;
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonials-section.testimonials-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonials-section.testimonials-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::testimonials-section.testimonials-section',
+      'oneToMany',
+      'api::testimonials-section.testimonials-section'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -1018,6 +1082,7 @@ declare module '@strapi/types' {
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::stats-section.stats-section': ApiStatsSectionStatsSection;
+      'api::testimonials-section.testimonials-section': ApiTestimonialsSectionTestimonialsSection;
     }
   }
 }

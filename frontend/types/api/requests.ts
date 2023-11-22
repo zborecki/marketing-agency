@@ -1,3 +1,3 @@
 export type LocaleRequest = {
-  locale: string;
+  locale?: string;
 };

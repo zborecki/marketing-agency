@@ -1,12 +1,16 @@
-import { ENDPOINT } from '#constants/endpoints';
-import { cms } from '#lib/api';
+import { getResponse } from '#services/common';
 import { LocaleRequest } from '#types/api/requests';
 import { ContactResponse, SocialMediaResponse } from '#types/api/responses';
 
 export const getContact = async () => (
-  await cms.get<ContactResponse>(`${ENDPOINT.CONTACT}?populate=deep`)
-).data.data;
+  getResponse<ContactResponse>({
+    endpoint: '/contact'
+  })
+);
 
 export const getSocialMedia = async ({ locale }: LocaleRequest) => (
-  await cms.get<SocialMediaResponse>(`${ENDPOINT.SOCIAL_MEDIA}?populate=deep&locale=${locale}`)
-).data.data;
+  getResponse<SocialMediaResponse>({
+    endpoint: '/social-media',
+    locale
+  })
+);
