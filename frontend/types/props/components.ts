@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { SocialMediaAPI } from '#types/api/components';
+import { TestimonialCardAPI } from '#types/api/components';
 import { BaseProps } from '#types/props/common';
 
 export interface DividerProps extends BaseProps {
@@ -11,8 +11,8 @@ export interface NavigationProps extends BaseProps {
   arrow?: boolean;
 }
 
-export interface SocialMediaProps extends BaseProps {
-  socialMedia: SocialMediaAPI[];
+export interface TestimonialCardProps extends BaseProps, TestimonialCardAPI {
+  full?: boolean;
 }
 
 export interface TooltipProps extends BaseProps, PropsWithChildren {

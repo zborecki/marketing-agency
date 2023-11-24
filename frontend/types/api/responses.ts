@@ -19,6 +19,10 @@ export interface ContactResponse {
   phoneNumber: string;
 }
 
+export interface GenericPaginatedResponse<T> {
+  data: T[];
+}
+
 export interface GenericResponse<T> {
   data: T;
 }

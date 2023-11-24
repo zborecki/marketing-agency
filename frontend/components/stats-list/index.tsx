@@ -5,10 +5,10 @@ import { StatsCard } from '#components/stats-card';
 import { StatsListProps } from '#types/props/lists';
 import { classNames } from '#utils/classNames';
 
-export const StatsList: FC<StatsListProps> = ({ className, items }) => (
+export const StatsList: FC<StatsListProps> = ({ className, cards }) => (
   <ul className={classNames(['ma-stats-list', className])}>
     {
-      items.map(({ description, value, type }) => (
+      cards.map(({ description, value, type }) => (
         <StatsCard
           description={description}
           key={uuid()}

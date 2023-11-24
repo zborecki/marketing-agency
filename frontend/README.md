@@ -13,6 +13,7 @@ All commands are run from the root of the project, from a terminal:
 - dayjs
 - eslint (airbnb's rules)
 - framer motion
+- keen-slider
 - next-intl
 - next.js
 - nextui

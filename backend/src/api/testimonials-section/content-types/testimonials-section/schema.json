@@ -33,17 +33,6 @@
       },
       "type": "string",
       "required": true
-    },
-    "testimonials": {
-      "type": "component",
-      "repeatable": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "card.testimonial-card",
-      "min": 2
     }
   }
 }

@@ -16,8 +16,8 @@ export const AchievementsSection = async () => {
       title={title}
     >
       <StatsList
+        cards={cards}
         className="achievements__list"
-        items={cards}
       />
     </Section>
   );

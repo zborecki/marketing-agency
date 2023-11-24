@@ -1,6 +1,12 @@
 import { cms } from '#lib/api';
-import { GenericResponse } from '#types/api/responses';
-import { GenericResponseProps } from '#types/props/common';
+import { GenericPaginatedResponse, GenericResponse } from '#types/api/responses';
+import { GenericPaginatedResponseProps, GenericResponseProps } from '#types/props/common';
+
+export const getPaginatedResponse = async <T>({
+  endpoint, locale, page = 1, pageSize = 2, populate = 'deep'
+}: GenericPaginatedResponseProps) => (await cms.get<GenericPaginatedResponse<T>>(
+  `${endpoint}?pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=${populate}&locale=${locale}`
+)).data.data;
 
 export const getResponse = async <T>({
   endpoint, locale, populate = 'deep'

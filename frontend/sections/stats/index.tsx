@@ -10,7 +10,7 @@ export const StatsSection = async () => {
 
   return (
     <SectionContainer color="primary">
-      <StatsList items={cards} />
+      <StatsList cards={cards} />
     </SectionContainer>
   );
 };

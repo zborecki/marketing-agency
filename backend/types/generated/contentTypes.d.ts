@@ -996,6 +996,74 @@ export interface ApiStatsSectionStatsSection extends Schema.SingleType {
   };
 }
 
+export interface ApiTestimonialTestimonial extends Schema.CollectionType {
+  collectionName: 'testimonials';
+  info: {
+    singularName: 'testimonial';
+    pluralName: 'testimonials';
+    displayName: 'Testimonial';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    logo: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    opinion: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    companyName: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: false;
+        };
+      }>;
+    signature: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::testimonial.testimonial',
+      'oneToMany',
+      'api::testimonial.testimonial'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiTestimonialsSectionTestimonialsSection
   extends Schema.SingleType {
   collectionName: 'testimonials_sections';
@@ -1027,15 +1095,6 @@ export interface ApiTestimonialsSectionTestimonialsSection
         i18n: {
           localized: true;
         };
-      }>;
-    testimonials: Attribute.Component<'card.testimonial-card', true> &
-      Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }> &
-      Attribute.SetMinMax<{
-        min: 2;
       }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -1082,6 +1141,7 @@ declare module '@strapi/types' {
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::stats-section.stats-section': ApiStatsSectionStatsSection;
+      'api::testimonial.testimonial': ApiTestimonialTestimonial;
       'api::testimonials-section.testimonials-section': ApiTestimonialsSectionTestimonialsSection;
     }
   }
