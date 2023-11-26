@@ -1,4 +1,6 @@
-import { OpeningDaysAPI, SocialMediaAPI, StatsCardAPI } from '#types/api/components';
+import {
+  OpeningDaysAPI, PaginationAPI, SocialMediaAPI, StatsCardAPI
+} from '#types/api/components';
 
 export interface AchievementsResponse extends SectionResponse {
   cards: StatsCardAPI[];
@@ -21,6 +23,9 @@ export interface ContactResponse {
 
 export interface GenericPaginatedResponse<T> {
   data: T[];
+  meta: {
+    pagination: PaginationAPI;
+  }
 }
 
 export interface GenericResponse<T> {

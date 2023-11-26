@@ -14,6 +14,12 @@ export interface OpeningDaysAPI {
   start?: DayOfTheWeek;
 }
 
+export interface PaginationAPI {
+  page: number;
+  pageCount: number;
+  total: number;
+}
+
 export interface SocialMediaAPI extends SocialMediaUI {
   label?: string;
   url: string;

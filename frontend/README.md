@@ -18,6 +18,8 @@ All commands are run from the root of the project, from a terminal:
 - next.js
 - nextui
 - normalize.css
+- react-redux
+- react toolkit
 - remark
 - remark-html
 - sass

@@ -1,0 +1,57 @@
+.ma-arrow-button {
+  @apply h-[26px] relative;
+
+  &:disabled {
+    @apply cursor-not-allowed;
+
+    .ma-arrow-button {
+      &__chevron path {
+        @apply stroke-gray-150;
+      }
+
+      &__line {
+        @apply bg-gray-150;
+      }
+    }
+  }
+
+  &__chevron {
+    @apply absolute top-1/2 transition-transform -translate-y-1/2;
+
+    &--left {
+      @apply -left-[1px] rotate-180;
+    }
+
+    &--right {
+      @apply -right-[1px];
+    }
+
+    path {
+      @apply stroke-primary-main transition-transform;
+    }
+  }
+
+  &__line {
+    @apply bg-primary-main h-[2px] transition-transform w-6;
+  }
+
+  &:hover:not(:disabled) .ma-arrow-button {
+    &__chevron {
+      &--left {
+        @apply -translate-x-[7px];
+      }
+
+      &--right {
+        @apply translate-x-[7px];
+      }
+
+      path {
+        @apply stroke-secondary-main;
+      }
+    }
+
+    &__line {
+      @apply bg-secondary-main scale-x-150;
+    }
+  }
+}

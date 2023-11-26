@@ -5,7 +5,8 @@ import { FC } from 'react';
 
 import { companyName } from '#constants/common';
 import { locales } from '#constants/languages';
-import { GlobalStylesLayout } from '#layouts/global-styles-layout';
+import { ReduxProvider } from '#providers/redux-provider';
+import { ThemeProvider } from '#providers/theme-provider';
 import { BaseLayoutProps } from '#types/props/layouts';
 
 const font = Poppins({
@@ -30,9 +31,11 @@ const RootLayout: FC<BaseLayoutProps> = ({
   return (
     <html lang={locale}>
       <body className={font.className}>
-        <GlobalStylesLayout>
-          { children }
-        </GlobalStylesLayout>
+        <ReduxProvider>
+          <ThemeProvider>
+            { children }
+          </ThemeProvider>
+        </ReduxProvider>
       </body>
     </html>
   );

@@ -4,9 +4,16 @@ import { GenericPaginatedResponseProps, GenericResponseProps } from '#types/prop
 
 export const getPaginatedResponse = async <T>({
   endpoint, locale, page = 1, pageSize = 2, populate = 'deep'
-}: GenericPaginatedResponseProps) => (await cms.get<GenericPaginatedResponse<T>>(
-  `${endpoint}?pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=${populate}&locale=${locale}`
-)).data.data;
+}: GenericPaginatedResponseProps) => {
+  const response = (await cms.get<GenericPaginatedResponse<T>>(
+    `${endpoint}?pagination[page]=${page}&pagination[pageSize]=${pageSize}&populate=${populate}&locale=${locale}`
+  )).data;
+
+  return {
+    data: response.data,
+    pagination: response.meta.pagination
+  };
+};
 
 export const getResponse = async <T>({
   endpoint, locale, populate = 'deep'

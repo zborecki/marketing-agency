@@ -28,6 +28,7 @@
       "#providers/*": ["./providers/*"],
       "#sections/*": ["./sections/*"],
       "#services/*": ["./services/*"],
+      "#slices/*": ["./slices/*"],
       "#theme/*": ["./theme/*"],
       "#types/*": ["./types/*"],
       "#utils/*": ["./utils/*"],
