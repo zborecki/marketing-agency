@@ -2,12 +2,17 @@
 
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 
-import { testimonialsReducer, testimonialsSlice } from '#slices/testimonial-slice';
+import { SLICE_ID } from '#constants/slices';
+import { testimonialsReducer } from '#slices/testimonial-slice';
 
 const reducer = combineReducers({
-  [testimonialsSlice.name]: testimonialsReducer
+  [SLICE_ID.TESTIMONIALS]: testimonialsReducer
 });
 
 export const store = configureStore({
   reducer
 });
+
+export type AppDispatch = typeof store.dispatch;
+
+export type ReduxState = ReturnType<typeof store.getState>;

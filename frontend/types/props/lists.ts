@@ -7,7 +7,10 @@ export interface SocialMediaProps extends BaseProps {
 
 export interface SliderWithPaginationProps {
   current: number;
-  initialItems: any[];
+  isLoaded?: boolean;
+  items: any[];
+  onNextPage: () => void;
+  onPreviousPage: () => void;
   slider?: {
     gap: number;
     perView: number;

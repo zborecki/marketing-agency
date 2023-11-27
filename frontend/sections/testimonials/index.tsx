@@ -2,6 +2,7 @@ import { useLocale } from 'next-intl';
 
 import { Section } from '#components/section';
 import { SliderWithPagination } from '#components/slider-with-pagination';
+import { Content } from '#sections/testimonials/content';
 import { getPaginatedTestimonials } from '#services/pagination';
 import { getTestimonialsSection } from '#services/sections';
 
@@ -16,11 +17,7 @@ export const TestimonialsSection = async () => {
       subtitle={description}
       title={title}
     >
-      <SliderWithPagination
-        current={pagination.page}
-        initialItems={data}
-        total={pagination.pageCount}
-      />
+      <Content />
     </Section>
   );
 };
