@@ -1,0 +1,28 @@
+.ma-testimonial-card {
+  @apply 
+    box-border 
+    bg-gray-0 
+    flex 
+    flex-col 
+    gap-8 
+    p-10 
+    rounded 
+    max-w-[554px]
+  ;
+
+  &--full {
+    @apply max-w-full;
+  }
+
+  &__content {
+    @apply h-[78px];
+  }
+
+  &__opinion, &__signature {
+    @apply text-ma-text-paragraph-2;
+  }
+
+  &__signature {
+    @apply italic text-gray-150;
+  }
+}

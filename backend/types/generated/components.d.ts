@@ -31,6 +31,19 @@ export interface CardStatsCard extends Schema.Component {
   };
 }
 
+export interface CardTestimonialCard extends Schema.Component {
+  collectionName: 'components_card_testimonial_cards';
+  info: {
+    displayName: 'Testimonial Card';
+    description: '';
+  };
+  attributes: {
+    opinion: Attribute.RichText & Attribute.Required;
+    representative: Attribute.String & Attribute.Required;
+    logo: Attribute.Media & Attribute.Required;
+  };
+}
+
 export interface DateStartEnd extends Schema.Component {
   collectionName: 'components_date_start_ends';
   info: {
@@ -85,6 +98,7 @@ declare module '@strapi/types' {
     export interface Components {
       'card.advantage-card': CardAdvantageCard;
       'card.stats-card': CardStatsCard;
+      'card.testimonial-card': CardTestimonialCard;
       'date.start-end': DateStartEnd;
       'item.social-media-item': ItemSocialMediaItem;
     }

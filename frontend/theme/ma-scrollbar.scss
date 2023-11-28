@@ -1,0 +1,11 @@
+body::-webkit-scrollbar {
+  @apply w-2;
+
+  &-thumb {
+    @apply bg-secondary-main;
+  }
+
+  &-track {
+    @apply bg-gray-100;
+  }
+}

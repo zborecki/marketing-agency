@@ -1,33 +1,44 @@
-import { ENDPOINT } from '#constants/endpoints';
-import { cms } from '#lib/api';
+import { getResponse } from '#services/common';
 import { LocaleRequest } from '#types/api/requests';
 import {
   AchievementsResponse,
   AdvantagesResponse,
-  HeroResponse,
-  StatsResponse
+  SectionResponse,
+  StatsResponse,
+  TestimonialsResponse
 } from '#types/api/responses';
 
 export const getAchievementsSection = async ({ locale }: LocaleRequest) => (
-  await cms.get<AchievementsResponse>(
-    `${ENDPOINT.ACHIEVEMENTS_SECTION}?populate=deep&locale=${locale}`
-  )
-).data.data;
+  getResponse<AchievementsResponse>({
+    endpoint: '/achievements-section',
+    locale
+  })
+);
 
 export const getAdvantagesSection = async ({ locale }: LocaleRequest) => (
-  await cms.get<AdvantagesResponse>(
-    `${ENDPOINT.ADVANTAGES_SECTION}?populate=deep&locale=${locale}`
-  )
-).data.data;
+  getResponse<AdvantagesResponse>({
+    endpoint: '/advantages-section',
+    locale
+  })
+);
 
 export const getHeroSection = async ({ locale }: LocaleRequest) => (
-  await cms.get<HeroResponse>(
-    `${ENDPOINT.HERO_SECTION}?locale=${locale}`
-  )
-).data.data;
+  getResponse<SectionResponse>({
+    endpoint: '/hero-section',
+    locale
+  })
+);
 
 export const getStatsSection = async ({ locale }: LocaleRequest) => (
-  await cms.get<StatsResponse>(
-    `${ENDPOINT.STATS_SECTION}?populate=deep&locale=${locale}`
-  )
-).data.data;
+  getResponse<StatsResponse>({
+    endpoint: '/stats-section',
+    locale
+  })
+);
+
+export const getTestimonialsSection = async ({ locale }: LocaleRequest) => (
+  getResponse<TestimonialsResponse>({
+    endpoint: '/testimonials-section',
+    locale
+  })
+);

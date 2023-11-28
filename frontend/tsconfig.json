@@ -28,7 +28,10 @@
       "#providers/*": ["./providers/*"],
       "#sections/*": ["./sections/*"],
       "#services/*": ["./services/*"],
+      "#skeletons/*": ["./skeletons/*"],
+      "#slices/*": ["./slices/*"],
       "#theme/*": ["./theme/*"],
+      "#thunks/*": ["./thunks/*"],
       "#types/*": ["./types/*"],
       "#utils/*": ["./utils/*"],
       "#/*": ["./*"]

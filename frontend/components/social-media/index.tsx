@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { v4 as uuid } from 'uuid';
 
 import { SocialItem } from '#components/social-item';
-import { SocialMediaProps } from '#types/props/components';
+import { SocialMediaProps } from '#types/props/lists';
 import { classNames } from '#utils/classNames';
 
 export const SocialMedia: FC<SocialMediaProps> = ({

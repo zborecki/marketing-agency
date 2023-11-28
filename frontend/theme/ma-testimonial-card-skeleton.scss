@@ -1,0 +1,27 @@
+.ma-testimonial-card-skeleton {
+  @apply bg-gray-0 max-w-[554px] p-10;
+
+  &__logo {
+    @apply max-w-[106px] h-12;
+  }
+
+  &__logo, &__opinion, &__signature {
+    @apply bg-gray-50;
+
+    &::before {
+      --nextui-content4: 212 29% 91%;
+    } 
+  }
+
+  &__opinion {
+    @apply h-[78px];
+  }
+
+  &__signature {
+    @apply h-[26px] max-w-[240px];
+  }
+
+  &__wrapper {
+    @apply flex flex-col gap-8;
+  }
+}

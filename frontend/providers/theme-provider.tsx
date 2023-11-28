@@ -5,7 +5,7 @@ import { FC, PropsWithChildren } from 'react';
 import 'normalize.css';
 import '#theme/ma-globals.scss';
 
-export const GlobalStylesLayout: FC<PropsWithChildren> = ({ children }) => (
+export const ThemeProvider: FC<PropsWithChildren> = ({ children }) => (
   <NextUIProvider>
     { children }
   </NextUIProvider>

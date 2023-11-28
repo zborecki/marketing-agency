@@ -1,7 +1,14 @@
 import { PropsWithChildren } from 'react';
 
-import { SocialMediaAPI } from '#types/api/components';
+import { TestimonialCardAPI } from '#types/api/components';
 import { BaseProps } from '#types/props/common';
+
+export interface ArrowButtonProps {
+  ariaLabel?: string;
+  direction?: 'left' | 'right';
+  disabled?: boolean;
+  onClick?: () => void;
+}
 
 export interface DividerProps extends BaseProps {
   maxWidth?: 'container' | 'full';
@@ -11,8 +18,15 @@ export interface NavigationProps extends BaseProps {
   arrow?: boolean;
 }
 
-export interface SocialMediaProps extends BaseProps {
-  socialMedia: SocialMediaAPI[];
+export interface PaginationProps extends BaseProps {
+  current: number;
+  onNextPage: () => void;
+  onPreviousPage: () => void;
+  total: number;
+}
+
+export interface TestimonialCardProps extends BaseProps, TestimonialCardAPI {
+  full?: boolean;
 }
 
 export interface TooltipProps extends BaseProps, PropsWithChildren {
