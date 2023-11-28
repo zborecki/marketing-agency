@@ -17,11 +17,15 @@ export const Section: FC<SectionProps> = ({
     className={classNames(['ma-section', className])}
     color={color}
   >
-    <SectionHeader
-      className={`ma-section__header ma-section__header--${color}`}
-      subtitle={subtitle}
-      title={title}
-    />
+    {
+      subtitle && title && (
+        <SectionHeader
+          className={`ma-section__header ma-section__header--${color}`}
+          subtitle={subtitle}
+          title={title}
+        />
+      )
+    }
     { children }
   </SectionContainer>
 );

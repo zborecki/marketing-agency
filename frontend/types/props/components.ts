@@ -1,7 +1,7 @@
 import { PropsWithChildren } from 'react';
 
-import { TestimonialCardAPI } from '#types/api/components';
-import { BaseProps } from '#types/props/common';
+import { CustomerAPI, TestimonialCardAPI } from '#types/api/components';
+import { BaseProps, SlideshowInstance } from '#types/props/common';
 
 export interface ArrowButtonProps {
   ariaLabel?: string;
@@ -12,6 +12,10 @@ export interface ArrowButtonProps {
 
 export interface DividerProps extends BaseProps {
   maxWidth?: 'container' | 'full';
+}
+
+export interface CustomersSlideshowProps {
+  customers: CustomerAPI[];
 }
 
 export interface NavigationProps extends BaseProps {
@@ -25,12 +29,24 @@ export interface PaginationProps extends BaseProps {
   total: number;
 }
 
+export interface SlideshowProps extends PropsWithChildren {
+  onAnimationEnded?: (instance: SlideshowInstance) => void;
+  onCreated?: (instance: SlideshowInstance) => void;
+  onUpdated?: (instance: SlideshowInstance) => void;
+  loop?: boolean;
+  perView?: number;
+  plugins?: any;
+  spacing?: number;
+}
+
 export interface TestimonialCardProps extends BaseProps, TestimonialCardAPI {
   full?: boolean;
 }
 
 export interface TooltipProps extends BaseProps, PropsWithChildren {
   label: string;
+  offset?: number;
+  placement?: 'bottom' | 'top';
 }
 
 export interface WrapperProps extends BaseProps, PropsWithChildren {

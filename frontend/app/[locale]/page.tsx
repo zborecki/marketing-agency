@@ -7,6 +7,7 @@ import { StatsSection } from '#/sections/stats';
 import { Divider } from '#components/divider';
 import { companyName } from '#constants/common';
 import { BaseLayout } from '#layouts/base-layout';
+import { CustomersSection } from '#sections/customers';
 import { TestimonialsSection } from '#sections/testimonials';
 import { Internalization } from '#types/locales';
 import { translator } from '#utils/translator';
@@ -28,6 +29,7 @@ const HomePage = () => (
       <AdvantagesSection />
       <AchievementsSection />
       <TestimonialsSection />
+      <CustomersSection />
     </main>
   </BaseLayout>
 );

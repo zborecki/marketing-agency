@@ -10,8 +10,8 @@ export interface SectionContainerProps
 }
 
 export interface SectionHeaderProps extends BaseProps {
-  subtitle: string;
-  title: string;
+  subtitle?: string;
+  title?: string;
 }
 
 export type SectionProps = PropsWithChildren & SectionHeaderProps & SectionUI;

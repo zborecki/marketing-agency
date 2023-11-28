@@ -1,0 +1,15 @@
+.ma-customer-item {
+  @apply 
+    h-[80px] 
+    inline-flex
+    items-center
+    justify-center
+    max-w-[164px] 
+    rounded-[4px]
+    w-full
+  ;
+
+  &__logo {
+    @apply brightness-0 filter grayscale invert;
+  }
+}
