@@ -18,5 +18,5 @@ export const getPaginatedResponse = async <T>({
 export const getResponse = async <T>({
   endpoint, locale, populate = 'deep'
 }: GenericResponseProps) => (await cms.get<GenericResponse<T>>(
-  `${endpoint}?populate=${populate}&locale=${locale}`
+  `${endpoint}?populate=${populate}${locale ? `&locale=${locale}` : ''}`
 )).data.data;

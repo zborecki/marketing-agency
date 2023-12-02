@@ -1,6 +1,13 @@
 import { DayOfTheWeek } from '#types/date-and-time';
 import { SocialMediaUI } from '#types/ui';
 
+export interface CustomerAPI {
+  logo: {
+    data: ImageAPI;
+  };
+  website: string;
+}
+
 export interface ImageAPI {
   alternativeText: string;
   height: number;

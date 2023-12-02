@@ -842,6 +842,36 @@ export interface ApiContactContact extends Schema.SingleType {
   };
 }
 
+export interface ApiCustomerCustomer extends Schema.CollectionType {
+  collectionName: 'customers';
+  info: {
+    singularName: 'customer';
+    pluralName: 'customers';
+    displayName: 'Customer';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    logo: Attribute.Media & Attribute.Required;
+    website: Attribute.String & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::customer.customer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::customer.customer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHeroSectionHeroSection extends Schema.SingleType {
   collectionName: 'hero_sections';
   info: {
@@ -1138,6 +1168,7 @@ declare module '@strapi/types' {
       'api::achievements-section.achievements-section': ApiAchievementsSectionAchievementsSection;
       'api::advantages-section.advantages-section': ApiAdvantagesSectionAdvantagesSection;
       'api::contact.contact': ApiContactContact;
+      'api::customer.customer': ApiCustomerCustomer;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::social-media.social-media': ApiSocialMediaSocialMedia;
       'api::stats-section.stats-section': ApiStatsSectionStatsSection;
