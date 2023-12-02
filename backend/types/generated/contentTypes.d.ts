@@ -807,6 +807,74 @@ export interface ApiAdvantagesSectionAdvantagesSection
   };
 }
 
+export interface ApiArticleArticle extends Schema.CollectionType {
+  collectionName: 'articles';
+  info: {
+    singularName: 'article';
+    pluralName: 'articles';
+    displayName: 'Article';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    teaser: Attribute.RichText &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    image: Attribute.Media &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    sections: Attribute.DynamicZone<['sections.article-section']> &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    slug: Attribute.UID<'api::article.article', 'title'> & Attribute.Required;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::article.article',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::article.article',
+      'oneToMany',
+      'api::article.article'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiContactContact extends Schema.SingleType {
   collectionName: 'contacts';
   info: {
@@ -1167,6 +1235,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::achievements-section.achievements-section': ApiAchievementsSectionAchievementsSection;
       'api::advantages-section.advantages-section': ApiAdvantagesSectionAdvantagesSection;
+      'api::article.article': ApiArticleArticle;
       'api::contact.contact': ApiContactContact;
       'api::customer.customer': ApiCustomerCustomer;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;

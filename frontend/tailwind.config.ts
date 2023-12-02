@@ -1,3 +1,5 @@
+/* eslint-disable max-lines */
+
 import type { Config } from 'tailwindcss';
 
 const { nextui } = require('@nextui-org/react');
@@ -70,6 +72,10 @@ const config: Config = {
           fontWeight: 700,
           lineHeight: '50px'
         }],
+        'ma-title-h3': ['30px', {
+          fontWeight: 700,
+          lineHeight: '45px'
+        }],
         'ma-title-h4': ['18px', {
           fontWeight: 400,
           lineHeight: '26px'
@@ -94,4 +100,5 @@ const config: Config = {
     nextui()
   ]
 };
+
 export default config;

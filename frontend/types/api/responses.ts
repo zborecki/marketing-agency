@@ -1,6 +1,17 @@
 import {
+  ArticleSectionAPI,
+  ImageAPI,
   OpeningDaysAPI, PaginationAPI, SocialMediaAPI, StatsCardAPI
 } from '#types/api/components';
+
+export interface ArticleResponse {
+  image: ImageAPI;
+  locale: string;
+  sections: ArticleSectionAPI[];
+  slug: string;
+  teaser: string;
+  title: string;
+}
 
 export interface AchievementsResponse extends SectionResponse {
   cards: StatsCardAPI[];

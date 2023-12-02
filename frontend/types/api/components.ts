@@ -1,5 +1,12 @@
 import { DayOfTheWeek } from '#types/date-and-time';
+import { ImageProps } from '#types/props/common';
 import { SocialMediaUI } from '#types/ui';
+
+export interface ArticleSectionAPI {
+  content: string;
+  heading: string;
+  image?: ImageAPI;
+}
 
 export interface CustomerAPI {
   logo: {
@@ -8,10 +15,8 @@ export interface CustomerAPI {
   website: string;
 }
 
-export interface ImageAPI {
-  alternativeText: string;
+export interface ImageAPI extends ImageProps {
   height: number;
-  url: string;
   width: number;
 }
 

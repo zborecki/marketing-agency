@@ -93,6 +93,19 @@ export interface ItemSocialMediaItem extends Schema.Component {
   };
 }
 
+export interface SectionsArticleSection extends Schema.Component {
+  collectionName: 'components_sections_article_sections';
+  info: {
+    displayName: 'Article section';
+    description: '';
+  };
+  attributes: {
+    heading: Attribute.String & Attribute.Required;
+    content: Attribute.RichText & Attribute.Required;
+    image: Attribute.Media;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface Components {
@@ -101,6 +114,7 @@ declare module '@strapi/types' {
       'card.testimonial-card': CardTestimonialCard;
       'date.start-end': DateStartEnd;
       'item.social-media-item': ItemSocialMediaItem;
+      'sections.article-section': SectionsArticleSection;
     }
   }
 }

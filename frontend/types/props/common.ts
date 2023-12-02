@@ -1,6 +1,5 @@
 import { KeenSliderHooks, KeenSliderInstance } from 'keen-slider';
 
-import { ENDPOINT } from '#constants/endpoints';
 import { LocaleRequest } from '#types/api/requests';
 
 export interface BaseProps {
@@ -13,8 +12,13 @@ export interface GenericPaginatedResponseProps extends GenericResponseProps {
 }
 
 export interface GenericResponseProps extends LocaleRequest {
-  endpoint: `${ENDPOINT}`;
+  endpoint: `${'/'}${string}`;
   populate?: 'deep';
+}
+
+export interface ImageProps {
+  alternativeText: string;
+  url: string;
 }
 
 export type SlideshowAnimation = {

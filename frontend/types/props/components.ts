@@ -10,6 +10,11 @@ export interface ArrowButtonProps {
   onClick?: () => void;
 }
 
+export interface ArticleHeaderProps {
+  teaser: string;
+  title: string;
+}
+
 export interface DividerProps extends BaseProps {
   maxWidth?: 'container' | 'full';
 }
