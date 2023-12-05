@@ -875,6 +875,60 @@ export interface ApiArticleArticle extends Schema.CollectionType {
   };
 }
 
+export interface ApiBlogSectionBlogSection extends Schema.SingleType {
+  collectionName: 'blog_sections';
+  info: {
+    singularName: 'blog-section';
+    pluralName: 'blog-sections';
+    displayName: 'Blog section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    title: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    description: Attribute.String &
+      Attribute.Required &
+      Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::blog-section.blog-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::blog-section.blog-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    localizations: Attribute.Relation<
+      'api::blog-section.blog-section',
+      'oneToMany',
+      'api::blog-section.blog-section'
+    >;
+    locale: Attribute.String;
+  };
+}
+
 export interface ApiContactContact extends Schema.SingleType {
   collectionName: 'contacts';
   info: {
@@ -1236,6 +1290,7 @@ declare module '@strapi/types' {
       'api::achievements-section.achievements-section': ApiAchievementsSectionAchievementsSection;
       'api::advantages-section.advantages-section': ApiAdvantagesSectionAdvantagesSection;
       'api::article.article': ApiArticleArticle;
+      'api::blog-section.blog-section': ApiBlogSectionBlogSection;
       'api::contact.contact': ApiContactContact;
       'api::customer.customer': ApiCustomerCustomer;
       'api::hero-section.hero-section': ApiHeroSectionHeroSection;

@@ -5,8 +5,7 @@ import {
   AchievementsResponse,
   AdvantagesResponse,
   SectionResponse,
-  StatsResponse,
-  TestimonialsResponse
+  StatsResponse
 } from '#types/api/responses';
 
 export const getAchievementsSection = async ({ locale }: LocaleRequest) => (
@@ -19,6 +18,13 @@ export const getAchievementsSection = async ({ locale }: LocaleRequest) => (
 export const getAdvantagesSection = async ({ locale }: LocaleRequest) => (
   getResponse<AdvantagesResponse>({
     endpoint: ENDPOINT.ADVANTAGES_SECTION,
+    locale
+  })
+);
+
+export const getBlogSection = async ({ locale }: LocaleRequest) => (
+  getResponse<SectionResponse>({
+    endpoint: ENDPOINT.BLOG_SECTION,
     locale
   })
 );
@@ -38,7 +44,7 @@ export const getStatsSection = async ({ locale }: LocaleRequest) => (
 );
 
 export const getTestimonialsSection = async ({ locale }: LocaleRequest) => (
-  getResponse<TestimonialsResponse>({
+  getResponse<SectionResponse>({
     endpoint: ENDPOINT.TESTIMONIALS_SECTION,
     locale
   })

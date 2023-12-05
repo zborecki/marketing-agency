@@ -55,6 +55,3 @@ export interface SocialMediaResponse {
 export interface StatsResponse {
   cards: StatsCardAPI[];
 }
-
-export interface TestimonialsResponse extends SectionResponse {
-}
