@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react';
 
-import { CustomerAPI, TestimonialCardAPI } from '#types/api/components';
+import { CustomerAPI, ImageAPI, TestimonialCardAPI } from '#types/api/components';
 import { BaseProps, SlideshowInstance } from '#types/props/common';
 
 export interface ArrowButtonProps {
@@ -10,9 +10,20 @@ export interface ArrowButtonProps {
   onClick?: () => void;
 }
 
+export interface ArticleCardProps {
+  image: ImageAPI;
+  publishedAt: string;
+  slug: string;
+  title: string;
+}
+
 export interface ArticleHeaderProps {
   teaser: string;
   title: string;
+}
+
+export interface DateBadgeProps extends BaseProps {
+  date: string;
 }
 
 export interface DividerProps extends BaseProps {

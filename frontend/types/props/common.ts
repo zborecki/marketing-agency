@@ -12,6 +12,7 @@ export interface GenericPaginatedResponseProps extends GenericResponseProps {
 }
 
 export interface GenericResponseProps extends LocaleRequest {
+  additionalQueryParameters?: string;
   endpoint: `${'/'}${string}`;
   populate?: 'deep';
 }

@@ -43,6 +43,15 @@ export interface GenericResponse<T> {
   data: T;
 }
 
+export interface RecommendedArticleResponse {
+  image: {
+    data: ImageAPI;
+  };
+  publishedAt: string;
+  slug: string;
+  title: string;
+}
+
 export interface SectionResponse {
   description: string;
   title: string;

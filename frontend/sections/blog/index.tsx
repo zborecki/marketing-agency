@@ -1,6 +1,7 @@
 import { useLocale } from 'next-intl';
 
 import { Section } from '#components/section';
+import { Content } from '#sections/blog/content';
 import { getBlogSection } from '#services/sections';
 
 export const Blog = async () => {
@@ -12,7 +13,7 @@ export const Blog = async () => {
       subtitle={description}
       title={title}
     >
-      Blog
+      <Content />
     </Section>
   );
 };

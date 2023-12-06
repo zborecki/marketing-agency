@@ -4,5 +4,6 @@ export enum INTERNAL_ROUTE {
   BLOG = '/blog',
   CONTACTS = '/contacts',
   ERROR_404 = '/404',
+  HOME = '/',
   SERVICES = '/services'
 }

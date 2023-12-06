@@ -1,0 +1,18 @@
+.ma-date-badge {
+  @apply 
+    bg-primary-main 
+    flex
+    gap-2
+    max-w-fit 
+    p-2 
+    rounded 
+  ;
+
+  &__date {
+    @apply text-gray-0 text-ma-other-explanation;
+  }
+
+  &__icon path {
+    @apply stroke-gray-0;
+  }
+}

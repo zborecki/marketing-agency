@@ -1,0 +1,23 @@
+.ma-article-card-skeleton {
+  @apply bg-gray-0 rounded max-w-[360px] transition-shadow;
+
+  &:hover {
+    @apply shadow-primary;
+  }
+
+  &__content {
+    @apply p-6;
+  }
+
+  &__cover {
+    @apply h-[229px] rounded w-full;
+  }
+
+  &__thumbnail {
+    @apply relative;
+  }
+
+  &__title {
+    @apply h-[calc(2*24px)];
+  }
+}

@@ -816,7 +816,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     description: '';
   };
   options: {
-    draftAndPublish: false;
+    draftAndPublish: true;
   };
   pluginOptions: {
     i18n: {
@@ -854,6 +854,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     slug: Attribute.UID<'api::article.article', 'title'> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::article.article',
       'oneToOne',
