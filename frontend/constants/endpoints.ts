@@ -1,6 +1,8 @@
 export enum ENDPOINT {
   ACHIEVEMENTS_SECTION = '/achievements-section',
   ADVANTAGES_SECTION = '/advantages-section',
+  ARTICLES = '/articles',
+  BLOG_SECTION = '/blog-section',
   CONTACT = '/contact',
   CUSTOMERS = '/customers',
   HERO_SECTION = '/hero-section',

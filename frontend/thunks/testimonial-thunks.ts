@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
+import { ENDPOINT } from '#constants/endpoints';
 import { SLICE_ID } from '#constants/slices';
 import { getPaginatedResponse } from '#services/common';
 import { TestimonialCardAPI } from '#types/api/components';
@@ -9,7 +10,7 @@ export const fetchPaginatedTestimonials = createAsyncThunk(
   `${SLICE_ID.TESTIMONIALS}/fetchPaginatedTestimonials`,
   async ({ locale, page }: PaginationRequest) => (
     getPaginatedResponse<TestimonialCardAPI>({
-      endpoint: '/testimonials',
+      endpoint: ENDPOINT.TESTIMONIALS,
       locale,
       page,
       pageSize: 2

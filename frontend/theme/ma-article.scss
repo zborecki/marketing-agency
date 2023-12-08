@@ -1,0 +1,37 @@
+.ma-article {
+  &__content {
+    @apply flex flex-col gap-14 max-w-[750px];
+  }
+
+  &__header {
+    @apply mb-14;
+  }
+
+  &__paragraph {
+    @apply text-ma-text-paragraph-1;
+  }
+
+  &__section {
+    @apply flex justify-between mt-14;
+  }
+
+  &__teaser {
+    @apply max-w-[768px] mx-auto self-center text-ma-text-paragraph-1;
+  }
+
+  &__teaser, &__title {
+    @apply text-center;
+  }
+
+  &__title {
+    @apply mb-14 text-ma-title-h2 text-primary-main;
+
+    &--small {
+      @apply text-ma-title-h3 text-secondary-main;
+    }
+  }
+
+  &__wrapper {
+    @apply py-[120px];
+  }
+}

@@ -6,9 +6,9 @@ export interface SocialMediaProps extends BaseProps {
 }
 
 export interface SliderWithPaginationProps {
+  children: any;
   current: number;
   isLoaded?: boolean;
-  items: any[];
   onNextPage: () => void;
   onPreviousPage: () => void;
   slider?: {

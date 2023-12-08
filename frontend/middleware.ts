@@ -11,6 +11,10 @@ export default createMiddleware({
       en: '/about-us',
       pl: '/o-nas'
     },
+    '/article/[slug]': {
+      en: '/article/[slug]',
+      pl: '/artykul/[slug]'
+    },
     '/blog': '/blog',
     '/contacts': {
       en: '/contacts',

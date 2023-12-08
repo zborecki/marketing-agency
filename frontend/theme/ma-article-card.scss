@@ -1,0 +1,36 @@
+.ma-article-card {
+  @apply bg-gray-0 max-w-[360px] rounded transition-shadow;
+
+  &:hover {
+    @apply shadow-primary;
+
+    .ma-article-card {
+      &__title {
+        @apply text-primary-main;
+      }
+    }
+  }
+
+  &__badge {
+    @apply absolute bottom-2 left-2;
+  }
+
+  &__content {
+    @apply p-6;
+  }
+
+  &__cover {
+    @apply rounded;
+  }
+
+  &__thumbnail {
+    @apply relative;
+  }
+
+  &__title {
+    @apply text-ellipsis overflow-hidden min-h-[48px] text-ma-text-paragraph-3;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+}
