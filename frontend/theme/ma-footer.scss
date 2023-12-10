@@ -7,6 +7,10 @@
 
   &__about-company {
     @apply italic text-gray-150 text-ma-text-paragraph-2;
+
+    @screen md {
+      @apply text-mobile-ma-paragraph-2;
+    }
   }
 
   &__bottom {
@@ -18,12 +22,34 @@
     @apply text-center text-gray-150 text-ma-other-explanation;
   }
 
+  &__introduction {
+    @screen lg {
+      @apply flex items-center justify-between;
+    }
+    
+    @screen sm {
+      @apply block;
+    }
+  }
+
   &__logo {
     @apply mb-8;
+
+    @screen lg {
+      @apply mb-0;
+    }
+
+    @screen sm {
+      @apply mb-4;
+    }
   }
 
   &__main {
     @apply gap-8 flex justify-between py-12;
+
+    @screen lg {
+      @apply flex-col;
+    }
   }
 
   &__navigation {
@@ -34,6 +60,10 @@
 
       &__list {
         @apply gap-x-24 gap-y-2 grid grid-cols-2;
+
+        @screen md {
+          @apply gap-x-12;
+        }
       }
     }
   }

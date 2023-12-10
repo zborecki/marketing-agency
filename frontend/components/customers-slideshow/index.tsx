@@ -30,7 +30,7 @@ export const CustomersSlideshow: FC<CustomersSlideshowProps> = ({
     <Slideshow plugins={handleOnAnimate} loop>
       {
         customers.map(({ logo, website }) => (
-          <li className="keen-slider__slide" key={uuid()}>
+          <li className="keen-slider__slide flex items-center justify-center" key={uuid()}>
             <CustomerItem
               logo={logo}
               website={website}

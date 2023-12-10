@@ -20,9 +20,17 @@
 
   &__opinion, &__signature {
     @apply text-ma-text-paragraph-2;
+
+    @screen md {
+      @apply text-mobile-ma-paragraph-2;
+    }
   }
 
   &__signature {
     @apply italic text-gray-150;
+  }
+
+  @screen md {
+    @apply max-w-full;
   }
 }

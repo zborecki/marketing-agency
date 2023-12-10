@@ -21,6 +21,10 @@
 
   &__cover {
     @apply rounded;
+
+    @screen sm {
+      @apply w-full;
+    }
   }
 
   &__thumbnail {
@@ -32,5 +36,13 @@
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
+
+    @screen md {
+      @apply text-mobile-ma-paragraph-3;
+    }
+  }
+
+  @screen sm {
+    @apply max-w-full;
   }
 }

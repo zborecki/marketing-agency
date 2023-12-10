@@ -16,6 +16,10 @@
   &__wrapper {
     &--default-padding {
       @apply py-[120px];
+
+      @screen md {
+        @apply py-14;
+      }
     }
   }
 
