@@ -18,5 +18,9 @@
         @apply text-gray-0;
       }
     }
+
+    @screen md {
+      @apply mb-10;
+    }
   }
 }

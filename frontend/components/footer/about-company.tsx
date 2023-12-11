@@ -6,7 +6,7 @@ export const AboutCompany = () => {
   const t = useTranslations('Component.Footer');
 
   return (
-    <div>
+    <div className="ma-footer__introduction">
       <Logo className="ma-footer__logo" />
       <p className="ma-footer__about-company">{ t('about-company') }</p>
     </div>

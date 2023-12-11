@@ -1,6 +1,12 @@
 .ma-header {
   @apply bg-gray-0;
 
+  &__navigation {
+    @screen lg {
+      @apply hidden;
+    }
+  }
+
   &__navigation .ma-navigation {
     &__link {
       @apply transition-colors;
@@ -23,6 +29,10 @@
 
   &__quick-contact {
     @apply text-end;
+
+    @screen lg {
+      @apply hidden;
+    }
   }
 
   &__wrapper.ma-wrapper {

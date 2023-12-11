@@ -33,6 +33,19 @@ export const Content = () => {
 
   return (
     <SliderWithPagination
+      breakpoints={{
+        '(max-width: 768px)': {
+          slides: {
+            spacing: 16,
+            perView: 2
+          }
+        },
+        '(max-width: 576px)': {
+          slides: {
+            perView: 1
+          }
+        }
+      }}
       current={pagination.page}
       isLoaded={status === 'success'}
       slider={{

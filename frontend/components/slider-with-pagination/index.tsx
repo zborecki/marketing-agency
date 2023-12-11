@@ -8,6 +8,7 @@ import { SliderWithPaginationProps } from '#types/props/lists';
 import 'keen-slider/keen-slider.min.css';
 
 export const SliderWithPagination: FC<SliderWithPaginationProps> = ({
+  breakpoints,
   children,
   current,
   isLoaded,
@@ -20,6 +21,7 @@ export const SliderWithPagination: FC<SliderWithPaginationProps> = ({
   total
 }) => {
   const [sliderRef] = useKeenSlider({
+    breakpoints,
     slides: {
       perView: slider.perView,
       spacing: slider.gap

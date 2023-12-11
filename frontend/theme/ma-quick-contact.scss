@@ -5,6 +5,10 @@
 
   &__opening-days {
     @apply text-ma-other-explanation;
+
+    @screen sm {
+      @apply text-mobile-ma-other-explanation;
+    }
   }
 
   &__phone-number {

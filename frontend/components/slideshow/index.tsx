@@ -17,6 +17,19 @@ export const Slideshow: FC<SlideshowProps> = ({
   spacing = 30
 }) => {
   const [sliderRef] = useKeenSlider({
+    breakpoints: {
+      '(max-width: 768px)': {
+        slides: {
+          spacing: 15,
+          perView: 3
+        }
+      },
+      '(max-width: 576px)': {
+        slides: {
+          perView: 1
+        }
+      }
+    },
     animationEnded: onAnimationEnded,
     created: onCreated,
     loop,

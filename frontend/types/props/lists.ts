@@ -6,6 +6,7 @@ export interface SocialMediaProps extends BaseProps {
 }
 
 export interface SliderWithPaginationProps {
+  breakpoints?: any;
   children: any;
   current: number;
   isLoaded?: boolean;

@@ -79,6 +79,42 @@ const config: Config = {
         'ma-title-h4': ['18px', {
           fontWeight: 400,
           lineHeight: '26px'
+        }],
+        'mobile-ma-number-big-1': ['40px', {
+          fontWeight: 700,
+          lineHeight: '48px'
+        }],
+        'mobile-ma-number-big-1-text': ['16px', {
+          fontWeight: 600,
+          lineHeight: '22.4px'
+        }],
+        'mobile-ma-other-explanation': ['8px', {
+          fontWeight: 400,
+          lineHeight: '10px'
+        }],
+        'mobile-ma-title-h0': ['42px', {
+          fontWeight: 700,
+          lineHeight: '42px'
+        }],
+        'mobile-ma-title-h2': ['30px', {
+          fontWeight: 700,
+          lineHeight: '32px'
+        }],
+        'mobile-ma-title-h4': ['14px', {
+          fontWeight: 400,
+          lineHeight: '22px'
+        }],
+        'mobile-ma-paragraph-1': ['14px', {
+          fontWeight: 400,
+          lineHeight: '22px'
+        }],
+        'mobile-ma-paragraph-2': ['12px', {
+          fontWeight: 400,
+          lineHeight: '20px'
+        }],
+        'mobile-ma-paragraph-3': ['11px', {
+          fontWeight: 400,
+          lineHeight: '19px'
         }]
       },
       maxWidth: {

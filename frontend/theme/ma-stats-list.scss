@@ -1,3 +1,15 @@
 .ma-stats-list {
   @apply gap-20 grid grid-cols-[repeat(4,minmax(0,225px))];
+
+  @screen lg {
+    @apply gap-10 grid-cols-2;
+  }
+
+  @screen md {
+    @apply gap-5;
+  }
+
+  @screen sm {
+    @apply grid-cols-1;
+  }
 }

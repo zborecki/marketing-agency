@@ -3,6 +3,14 @@
 
   &__description {
     @apply text-ma-text-paragraph-2;
+
+    @screen md {
+      @apply text-mobile-ma-paragraph-2;
+    }
+
+    @screen sm {
+      @apply whitespace-normal;
+    }
   }
 
   &__title {
@@ -10,6 +18,14 @@
 
     &--small {
       @apply text-ma-number-big-1-text;
+
+      @screen md {
+        @apply text-mobile-ma-number-big-1-text;
+      }
+    }
+
+    @screen md {
+      @apply text-mobile-ma-number-big-1;
     }
   }
 }
