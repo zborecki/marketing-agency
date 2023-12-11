@@ -1,0 +1,72 @@
+.ma-hamburger {
+  @apply hidden;
+
+  &:hover .ma-hamburger {
+    &__ingredient {
+      &::after, &::before {
+        @apply bg-secondary-main;
+      }
+    }
+  }
+
+  &__header {
+    @apply flex flex-col gap-1;
+  }
+
+  &__ingredient {
+    @apply bg-transparent block h-1;
+
+    &::after {
+      @apply top-1.5;
+    }
+
+    &::after, &::before {
+      @apply absolute bg-typography-main h-1 left-0 rounded transition-colors w-full;
+      content: "";
+    }
+
+    &::before {
+      @apply bottom-1.5;
+    }
+  }
+
+  &__navigation .ma-navigation {
+    &__item {
+      @apply last-of-type:mb-0 mb-8;
+
+      @screen lg {
+        @apply mb-4;
+      }
+    }
+
+    &__link {
+      @apply font-semibold leading-9 text-5xl text-transparent transition-colors uppercase;
+      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-color: #232323;
+
+      &:hover {
+        @apply text-typography-main;
+      }
+
+      @screen lg {
+        @apply text-4xl;
+      }
+    }
+  }
+
+  &__title {
+    @apply mb-4 text-secondary-main text-ma-title-h0;
+
+    @screen lg {
+      @apply text-mobile-ma-title-h0;
+    }
+  }
+
+  &__wrapper {
+    @apply flex-col items-center justify-center relative;
+  }
+
+  @screen lg {
+    @apply block h-10 hover:bg-gray-50 p-1 rounded transition-colors w-11;
+  }
+}

@@ -8,6 +8,9 @@
         "contacts": "Contacts"
       }
     },
+    "Hamburger": {
+      "navigation": "Navigation"
+    },
     "Navigation": {
       "about-us": "About us",
       "blog": "Blog",
