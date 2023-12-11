@@ -1,5 +1,6 @@
 import Link from 'next/link';
 
+import { Hamburger } from '#components/hamburger';
 import { Logo } from '#components/logo';
 import { Navigation } from '#components/navigation';
 import { QuickContact } from '#components/quick-contact';
@@ -12,6 +13,7 @@ export const Header = () => (
       <Link href={INTERNAL_ROUTE.HOME}>
         <Logo />
       </Link>
+      <Hamburger />
       <Navigation className="ma-header__navigation" arrow />
       <QuickContact className="ma-header__quick-contact" />
     </Wrapper>

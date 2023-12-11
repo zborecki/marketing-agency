@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import { notFound } from 'next/navigation';
+import { NextIntlClientProvider, useMessages } from 'next-intl';
 import { FC } from 'react';
 
 import { companyName } from '#constants/common';
@@ -22,6 +23,7 @@ const RootLayout: FC<BaseLayoutProps> = ({
   children,
   params: { locale }
 }) => {
+  const messages = useMessages();
   const isValidLocale = locales.some((currentLocale) => currentLocale === locale);
 
   if (!isValidLocale) {
@@ -33,7 +35,9 @@ const RootLayout: FC<BaseLayoutProps> = ({
       <body className={font.className}>
         <ReduxProvider>
           <ThemeProvider>
-            { children }
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              { children }
+            </NextIntlClientProvider>
           </ThemeProvider>
         </ReduxProvider>
       </body>
